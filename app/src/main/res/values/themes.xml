@@ -3,7 +3,9 @@
     <style name="Base.Theme.Task" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:windowBackground"> @color/color_defaut</item>
+        <item name="colorPrimary"> @color/color_defaut</item>
+        <item name="colorPrimaryVariant"> @color/color_defaut</item>
+        <item name="android:windowBackground">@color/color_defaut</item>
     </style>
 
     <style name="Theme.Task" parent="Base.Theme.Task" />

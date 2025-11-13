@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.angelo.task.R
-import com.angelo.task.databinding.FragmentLoginBinding
-import com.angelo.task.databinding.FragmentRegisterBinding
-
-class LoginFragment : Fragment() {
+import com.angelo.task.databinding.FragmentRecoverAccountBinding
 
 
-    private var _binding: FragmentLoginBinding? = null
+class RecoverAccountFragment : Fragment() {
+
+    private var _binding: FragmentRecoverAccountBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,8 +19,8 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+
+        _binding = FragmentRecoverAccountBinding.inflate(inflater,container,false)
         return binding.root
     }
 
