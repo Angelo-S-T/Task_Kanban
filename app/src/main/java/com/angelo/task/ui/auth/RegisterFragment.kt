@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.angelo.task.R
 import com.angelo.task.databinding.FragmentRegisterBinding
 import com.angelo.task.ui.util.initToolbar
+import com.angelo.task.ui.util.showBottomSheet
 
 
 class RegisterFragment : Fragment() {
@@ -42,14 +43,15 @@ class RegisterFragment : Fragment() {
     private fun validateData() {
         val email = binding.digiteEmail.text.toString().trim()
         val senha = binding.digiteSenha.text.toString().trim()
+
         if (email.isNotBlank()) {
             if (senha.isNotBlank()) {
-                findNavController().navigate(R.id.action_global_homeFragment)
+                Toast.makeText(requireContext(),"Tudo OK!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(requireContext(), "Preencha a senha", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message = R.string.password_empty_register_fragment)
             }
         } else {
-            Toast.makeText(requireContext(), "Preecha se email", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = R.string.email_empty_register_fragment)
         }
     }
 

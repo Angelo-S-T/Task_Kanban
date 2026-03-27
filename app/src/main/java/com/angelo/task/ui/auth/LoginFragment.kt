@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.angelo.task.R
 import com.angelo.task.databinding.FragmentLoginBinding
 import com.angelo.task.databinding.FragmentRegisterBinding
+import com.angelo.task.ui.util.showBottomSheet
 
 class LoginFragment : Fragment() {
 
@@ -51,10 +52,10 @@ class LoginFragment : Fragment() {
             if (senha.isNotBlank()) {
                 findNavController().navigate(R.id.action_global_homeFragment)
             } else {
-                Toast.makeText(requireContext(), "Preencha a senha", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message=R.string.password_empty)
             }
         } else {
-            Toast.makeText(requireContext(), "Preecha se email", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = R.string.email_empty)
         }
     }
 

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.angelo.task.R
 import com.angelo.task.databinding.FragmentFormTaskBinding
 import com.angelo.task.databinding.FragmentLoginBinding
@@ -29,6 +30,22 @@ class FormTaskFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initToolbar(binding.toolBar)
+        initListener()
+    }
+
+    private fun initListener(){
+        binding.buttonSave.setOnClickListener {
+            validateData()
+        }
+    }
+
+    private fun validateData(){
+        val description = binding.editTextDescricao.text.toString().trim()
+        if (description.isNotBlank()){
+            Toast.makeText(requireContext(),"Tudo OK!", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(requireContext(), "Preecha uma descrição", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onDestroyView() {

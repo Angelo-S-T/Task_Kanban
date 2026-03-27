@@ -78,32 +78,35 @@
             app:layout_constraintTop_toBottomOf="@id/textViewStatus">
             <RadioButton
                 android:layout_width="88dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:buttonTint="@color/black"
                 android:id="@+id/rbTodo"
                 android:text="A Fazer"
                 android:checked="true"
                 android:theme="@style/MyRadioButton"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_weight="1"/>
 
             <RadioButton
                 android:layout_width="88dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:buttonTint="@color/black"
                 android:id="@+id/rbDoing"
                 android:text="Fazendo"
                 android:theme="@style/MyRadioButton"
                 android:checked="true"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_weight="1"/>
             <RadioButton
                 android:layout_width="88dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:buttonTint="@color/black"
                 android:id="@+id/rbDone"
                 android:text="Feita"
                 android:theme="@style/MyRadioButton"
                 android:checked="true"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_weight="1"/>
         </RadioGroup>
 
         <com.google.android.material.button.MaterialButton
