@@ -11,6 +11,7 @@ import com.angelo.task.databinding.FragmentFormTaskBinding
 import com.angelo.task.databinding.FragmentLoginBinding
 import com.angelo.task.databinding.FragmentRecoverAccountBinding
 import com.angelo.task.ui.util.initToolbar
+import com.angelo.task.ui.util.showBottomSheet
 
 
 class FormTaskFragment : Fragment() {
@@ -44,7 +45,7 @@ class FormTaskFragment : Fragment() {
         if (description.isNotBlank()){
             Toast.makeText(requireContext(),"Tudo OK!", Toast.LENGTH_SHORT).show()
         }else{
-            Toast.makeText(requireContext(), "Preecha uma descrição", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = getString(R.string.description_empty_form_task_fragment))
         }
     }
 

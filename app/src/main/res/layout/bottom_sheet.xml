@@ -11,7 +11,7 @@
         android:id="@+id/textviewTitle"
         android:textAlignment="center"
         android:textColor="@color/color_defaut"
-        android:text="Atenção"/>
+        android:text="@string/text_title_warning"/>
 
     <View
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
         android:layout_marginTop="16dp"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:text="Menssagem"/>
+        android:text="@string/text_title_mensage"/>
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
         android:id="@+id/buttonOk"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_btn"
-        android:text="Entendi"
+        android:text="@string/text_button_warning"
         android:textColor="@color/white"
         android:backgroundTint="@color/color_defaut"/>
 
