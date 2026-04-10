@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.angelo.task.R
 import com.angelo.task.databinding.FragmentRecoverAccountBinding
-import com.angelo.task.ui.util.initToolbar
-import com.angelo.task.ui.util.showBottomSheet
+import com.angelo.task.util.initToolbar
+import com.angelo.task.util.showBottomSheet
 
 
 class RecoverAccountFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.angelo.task.ui.util
+package com.angelo.task.util
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar

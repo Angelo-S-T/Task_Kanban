@@ -36,12 +36,12 @@
                 android:layout_height="48dp"
                 android:id="@+id/buttonBack"
                 android:background="@android:color/transparent"
-                android:src="@drawable/icback_24"
+                android:src="@drawable/icback"
                 app:layout_constraintBottom_toBottomOf="@id/buttonEditar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/buttonEditar"
                 app:layout_constraintEnd_toStartOf="@id/buttonDelete"
-                android:tint="@color/color_defaut"
+                app:tint="@color/color_defaut"
                 android:contentDescription="Anterior"/>
 
             <com.google.android.material.button.MaterialButton
@@ -92,6 +92,22 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/buttonEditar"
                 app:layout_constraintTop_toTopOf="@+id/buttonEditar" />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="112dp"
+                android:id="@+id/buttonForward"
+                android:background="@android:color/transparent"
+                android:src="@drawable/icforward"
+                app:layout_constraintBottom_toBottomOf="@+id/buttonEditar"
+                app:layout_constraintEnd_toEndOf="@id/ConstrainLayout2"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toEndOf="@id/buttonDetails"
+                app:layout_constraintTop_toTopOf="@id/buttonEditar"
+                android:contentDescription="Próximo"
+                app:tint="@color/color_defaut"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>

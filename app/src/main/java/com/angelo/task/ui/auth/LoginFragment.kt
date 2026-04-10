@@ -5,12 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.angelo.task.R
 import com.angelo.task.databinding.FragmentLoginBinding
-import com.angelo.task.databinding.FragmentRegisterBinding
-import com.angelo.task.ui.util.showBottomSheet
+import com.angelo.task.util.showBottomSheet
 
 class LoginFragment : Fragment() {
 
