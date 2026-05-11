@@ -6,16 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
+import androidx.navigation.fragment.findNavController
 import com.angelo.task.R
 import com.angelo.task.databinding.FragmentRegisterBinding
 import com.angelo.task.util.initToolbar
 import com.angelo.task.util.showBottomSheet
+
+import com.google.firebase.auth.FirebaseAuth
 
 
 class RegisterFragment : Fragment() {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,6 +51,8 @@ class RegisterFragment : Fragment() {
 
         if (email.isNotBlank()) {
             if (senha.isNotBlank()) {
+                binding.progressBar.isVisible = true
+                registerUser(email,senha)
                 Toast.makeText(requireContext(),"Tudo OK!", Toast.LENGTH_SHORT).show()
             } else {
                 showBottomSheet(message = getString(R.string.password_empty_register_fragment))
@@ -53,6 +61,29 @@ class RegisterFragment : Fragment() {
             showBottomSheet(message = getString(R.string.email_empty_register_fragment))
         }
     }
+
+    private fun registerUser(email: String, password: String){
+        try{
+
+            val auth = FirebaseAuth.getInstance()
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if(task.isSuccessful){
+                        //Enacaminha para a tela de Home
+                        findNavController().navigate(R.id.action_global_homeFragment)
+                    }else{
+                        binding.progressBar.isVisible = false
+                        Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+        }catch (e: Exception){
+            Toast.makeText(requireContext(), e.message.toString(), Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -18,6 +18,11 @@
     <!--Login Fragment -->
     <string name="text_title_login_fragment">Login</string>
     <string name="text_button_register_login_fragment">Rcuperar Conta</string>
+
+    <!-- Home Fragment -->
+    <string name="text_button_dialog_confirm_logout">Deseja sair da sua conta?</string>
+    <string name="text_title_dialog_confira_logout">Confirmar</string>
+    <string name="text_message_dialog_confirm_logout">Aperte em confirmar para sair da sua conta</string>
     <!--Register Fragment -->
     <string name="email_empty_register_fragment">Preecha um email válido</string>
     <string name="password_empty_register_fragment">Preecha uma senha</string>
@@ -31,4 +36,6 @@
     <string name="description_empty_form_task_fragment">Preecha uma descrição</string>
     <!--Bottom Sheet -->
     <string name="text_title_mensage">Mensagem</string>
+    <string name="text_save_sucess_form_task_fragment">Task feita com sucesso</string>
+    <string name="error_generic">Algunm Erro Ocorreu</string>
 </resources>
